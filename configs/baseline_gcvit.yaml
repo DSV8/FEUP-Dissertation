@@ -1,0 +1,13 @@
+evaluation:
+  batch_size: 16
+  distance_metric: "cosine"
+  metrics_ks: [1, 5, 10]
+  metrics_relevant_top_n: 5
+  metrics_map_k: 10
+  metrics_gain: "linear"
+
+loader:
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4

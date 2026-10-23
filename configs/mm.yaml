@@ -1,0 +1,35 @@
+training:
+  num_epochs: 100
+  batch_size: 32
+  margin: 0.1
+  learning_rate: 0.00001
+  distance_metric: "euclidean"
+  loss_metric: "triplet_margin"
+  use_rank_weighted_loss: false
+  rank_weight_alpha: 0.25
+  image_embedding_mode: "encoded_at_runtime"
+  resume_training: false
+  profile_timing: false
+  profile_first_n_epochs: 3
+
+model:
+  tabular_embedding_dim: 64
+  fusion_embedding_dim: 64
+  tabular_nhead: 1
+  tabular_num_layers: 1
+  tabular_encoder_type: "mlp"
+  fusion_nhead: 1
+  fusion_num_layers: 1
+  fusion_mode: "cross_attention"
+
+loader:
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+evaluation:
+  metrics_ks: [1, 5, 10]
+  metrics_relevant_top_n: 5
+  metrics_map_k: 10
+  metrics_gain: "linear"

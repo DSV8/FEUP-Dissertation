@@ -1,0 +1,46 @@
+training:
+  num_epochs: 100
+  batch_size_cf: 32
+  batch_size_mm: 32
+  learning_rate: 0.00002
+  weight_decay: 0.0001
+  triplet_margin: 0.1
+  distance_metric: "euclidean"
+  gain: "linear"
+  loss_metric: "triplet_margin"
+  use_uncertainty_weighting: true
+  cf_loss_weight: 1.0
+  mm_loss_weight: 1.0
+  use_rank_weighted_triplet: false
+  rank_weight_alpha: 0.25
+  image_embedding_mode: "encoded_at_runtime"
+  resume_training: false
+  freeze_image: false
+  freeze_tabular: false
+
+model:
+  hidden_dim: 128
+  dropout: 0.1
+  tabular_embedding_dim: 64
+  fusion_embedding_dim: 64
+  tabular_nhead: 1
+  tabular_num_layers: 1
+  tabular_encoder_type: "mlp"
+  fusion_nhead: 1
+  fusion_num_layers: 1
+  cf_model_variant: "NCF"
+  cf_projection_dim: 64
+  cf_fm_k: 8
+  cf_hidden_dims: [256, 128, 64, 32]
+  cf_ncf_fusion_heads: 2
+  cf_ncf_fusion_layers: 1
+  cf_ncf_fusion_dim: 64
+  cf_ncf_dropout: 0.1
+  fusion_mode: "cross_attention"
+  cf_use_fused_input: true
+
+loader:
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4

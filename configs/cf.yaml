@@ -1,0 +1,25 @@
+training:
+  num_epochs: 200
+  batch_size: 128
+  learning_rate: 0.0002
+  weight_decay: 0.0003
+  gain: "linear"
+  image_embedding_mode: "precomputed"
+  resume_training: false
+  normalize_tabular: true
+
+model:
+  variant: "NCF"
+  fusion_dim: 64
+  tabular_dim: 64
+  tabular_encoder_type: "mlp"
+  nhead: 1
+  num_layers: 1
+  dropout: 0.2
+  projection_dim: 64
+  fm_k: 8
+  hidden_dims: [256, 128, 64, 32]
+  ncf_fusion_heads: 1
+  ncf_fusion_layers: 1
+  ncf_fusion_dim: 64
+  ncf_fusion_mode: "cross_attention"

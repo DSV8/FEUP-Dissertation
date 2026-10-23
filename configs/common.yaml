@@ -1,0 +1,9 @@
+data:
+  dataset_path: "/nas-ctm01/datasets/private/CINDERELLA/moe_organized_retrieval_CINDERELLA/multimodal/pre_post"
+  catalogue_type: "Excl"
+  split_ratio: 0.8
+  seed: 10
+
+paths:
+  cache_dir: "cache/multimodal/pre_post"
+  checkpoint_dir: "checkpoints"

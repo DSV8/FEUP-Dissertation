@@ -1,0 +1,37 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# macOS files
+._*
+.DS_Store
+
+# Data files
+/data/
+
+# Cache files
+/cache/
+
+# Outputs
+/outputs/
+*.out
+*.err
+
+# Figures
+/figures/
+
+# Wandb files
+/wandb/
+
+# Shell scripts
+*.sh
+
+# Checkpoint files
+/checkpoints/
